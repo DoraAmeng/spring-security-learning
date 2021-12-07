@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  #druid config
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/spring_security_note?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: bjs123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initial-size: 5
+    min-idle: 5
+    max-active: 20
+    max-wait: 30000
+    time-between-eviction-runs-millis: 30000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    pool-prepared-statements: true
+    filters: stat
+    #filters: stat, wall, slf4j
+    #exception-sorter: true
+    max-pool-prepared-statment-per-connection-size: 20
+
+mybatis:
+  configuration:
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+  mapper-locations: classpath:mapper/*Mapper.xml
+#  type-aliases-package: com.whitehat.citystory.entity

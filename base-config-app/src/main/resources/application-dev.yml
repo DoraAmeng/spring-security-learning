@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    include: daoDev
+server:
+  port: 8080
