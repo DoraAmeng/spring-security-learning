@@ -37,7 +37,10 @@ public class TokenCallbackController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Bearer " + access_token);
         HttpEntity<Object> httpEntity = new HttpEntity<>(headers);
-        ResponseEntity<String> entity = restTemplate.exchange("http://localhost:8080/resource/test1", HttpMethod.GET, httpEntity, String.class);
+        //test1 oauth认证即可访问
+        //ResponseEntity<String> entity = restTemplate.exchange("http://localhost:8080/resource/test1", HttpMethod.GET, httpEntity, String.class);
+        //role 需要admin角色才可以访问
+        ResponseEntity<String> entity = restTemplate.exchange("http://localhost:8080/resource/role", HttpMethod.GET, httpEntity, String.class);
         System.out.println(entity.getBody());
     }
 }

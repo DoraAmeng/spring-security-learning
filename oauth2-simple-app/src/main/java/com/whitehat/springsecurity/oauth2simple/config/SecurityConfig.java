@@ -37,9 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable()
                 .formLogin()
-                //.loginPage("/login.html")
+                .loginPage("/login.html")
                 .usernameParameter("username").passwordParameter("password")
-                //.loginProcessingUrl("/login")   //登录接口路径，该路径须与form表单中的action路径一致
+                .loginProcessingUrl("/login")   //登录接口路径，该路径须与form表单中的action路径一致
                 .defaultSuccessUrl("/index.html")  //登录成功后跳转页面
                 .failureUrl("/error.html") //登录失败后跳转页面
                 .and()

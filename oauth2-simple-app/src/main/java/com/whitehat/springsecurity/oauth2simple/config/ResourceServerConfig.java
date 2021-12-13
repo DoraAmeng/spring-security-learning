@@ -22,6 +22,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 //        services.setClientSecret("123");
 //        return services;
 //    }
+
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         // super.configure(resources);

@@ -14,6 +14,9 @@
         <module>base-config-app</module>
         <module>frontend-backend-separation-app</module>
         <module>oauth2-simple-app</module>
+        <module>oauth2-resource-server</module>
+        <module>oauth2-resource-server</module>
+        <module>oauth2-resource-server</module>
     </modules>
 
     <parent>
